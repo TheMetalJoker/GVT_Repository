@@ -17,7 +17,7 @@
 .rabbit {
   width: 120px;
   height: 192px;
-  background-image: url("images/rabbit.png");
+  background-image: url("scheibe/images/rabbit.png");
   background-size: 768px 192px;
   background-repeat: no-repeat;
   animation: rabbit-run 0.8s steps(6) infinite;
