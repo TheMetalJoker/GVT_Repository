@@ -1,0 +1,34 @@
+#disc {
+    display: block;
+    width: auto;
+    height: 500px;
+}
+.controls {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.button {
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.rabbit {
+  width: 120px;
+  height: 192px;
+  background-image: url("images/rabbit.png");
+  background-size: 768px 192px;
+  background-repeat: no-repeat;
+  animation: rabbit-run 0.8s steps(6) infinite;
+}
+
+@keyframes rabbit-run {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -768px 0;
+  }
+}
