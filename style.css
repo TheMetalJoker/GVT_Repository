@@ -32,3 +32,17 @@
     background-position: -768px 0;
   }
 }
+
+.button-link {
+  display: inline-block;
+  padding: 10px 16px;
+  margin-top: 16px;
+  background-color: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.button-link:hover {
+  background-color: #1d4ed8;
+}
