@@ -1,16 +1,19 @@
+<!doctype html>
 <html lang="de">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>2D-Geometrie aus Linien</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>Meine 2D-Geometrie</h1>
+
   <canvas id="glCanvas" width="600" height="600">
     Dein Browser unterstützt kein Canvas.
   </canvas>
 
-  <!-- Vertex-Shader: übernimmt die Position jedes Vertex -->
+  <!-- Shader-Quelltexte: script.js liest sie aus -->
   <script id="vertex-shader" type="x-shader/x-vertex">
     attribute vec2 aPosition;
 
@@ -19,7 +22,6 @@
     }
   </script>
 
-  <!-- Fragment-Shader: bestimmt die Farbe der gezeichneten Linien -->
   <script id="fragment-shader" type="x-shader/x-fragment">
     precision mediump float;
 
@@ -28,6 +30,7 @@
     }
   </script>
 
+  <!-- Lädt den ausführbaren JavaScript-Code -->
   <script src="script.js"></script>
 </body>
 </html>
