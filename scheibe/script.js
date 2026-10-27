@@ -1,17 +1,17 @@
 // Pfade zu den Einzelbildern
 const frames = [
-  "scheibe/images/1.png",
-  "scheibe/images/2.png",
-  "scheibe/images/3.png",
-  "scheibe/images/4.png",
-  "scheibe/images/5.png",
-  "scheibe/images/6.png",
-  "scheibe/images/7.png",
-  "scheibe/images/8.png",
-  "scheibe/images/9.png",
-  "scheibe/images/10.png",
-  "scheibe/images/11.png",
-  "scheibe/images/12.png"
+  "images/1.png",
+  "images/2.png",
+  "images/3.png",
+  "images/4.png",
+  "images/5.png",
+  "images/6.png",
+  "images/7.png",
+  "images/8.png",
+  "images/9.png",
+  "images/10.png",
+  "images/11.png",
+  "images/12.png"
 ];
 
 const disc = document.querySelector("#disc");
