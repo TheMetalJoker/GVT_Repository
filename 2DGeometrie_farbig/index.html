@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2D-Geometrie aus Linien</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Meine farbige 2D-Geometrie</h1>
+
+  <canvas id="glCanvas" width="600" height="600">
+    Dein Browser unterstützt kein Canvas.
+  </canvas>
+
+  <!-- Shader-Quelltexte: script.js liest sie aus -->
+  <script id="vertex-shader" type="x-shader/x-vertex">
+  attribute vec2 aPosition;
+  attribute vec3 aColor;
+
+  varying vec3 vColor;
+
+  void main() {
+    gl_Position = vec4(aPosition, 0.0, 1.0);
+    vColor = aColor;
+  }
+  </script>
+
+  <script id="fragment-shader" type="x-shader/x-fragment">
+  precision mediump float;
+
+  varying vec3 vColor;
+
+  void main() {
+    gl_FragColor = vec4(vColor, 1.0);
+  }
+  </script>
+
+  <!-- Lädt den ausführbaren JavaScript-Code -->
+  <script src="farbigscript.js"></script>
+</body>
+</html>

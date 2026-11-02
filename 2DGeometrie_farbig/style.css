@@ -1,0 +1,7 @@
+#glCanvas {
+  display: block;
+  width: 600px;
+  height: 600px;
+  border: 2px solid red;
+  background: #f2f2f2;
+}
