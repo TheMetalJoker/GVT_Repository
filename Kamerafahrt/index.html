@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b20">
+  <title>Geometrie im Orbit — WebGL-Lernbasis</title>
+  <link rel="stylesheet" href="newstyle.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <header class="masthead">
+      <div>
+        <h1>Geometrie<br><span>im Orbit</span></h1>
+      </div>
+    </header>
+
+    <section class="stage" aria-label="Interaktive WebGL-Szene">
+      <canvas id="scene" aria-label="Torus und rekursive Kugel in einer interaktiven 3D-Szene">
+        Für die 3D-Darstellung wird ein WebGL-2-fähiger Browser benötigt.
+      </canvas>
+    </section>
+
+    <section class="workbench" aria-label="Interaktion und Parameter">
+      <div class="control-card">
+        <p class="section-index">KAMERA</p>
+        <h2>Orbit steuern</h2>
+        <p class="control-copy">Die Kamera blickt stets zum Szenenzentrum. Radius und Höhe sind getrennte Werte.</p>
+        <div class="key-list">
+          <span class="key">←</span><span class="key">→</span><span>Orbitwinkel ändern</span>
+          <span class="key">N</span><span class="key">⇧ N</span><span>Radius größer / kleiner</span>
+          <span class="key">↑</span><span class="key">↓</span><span>Kamerahöhe ändern</span>
+        </div>
+        <div class="readouts" aria-live="polite">
+          <span>Radius <b id="radius-value">8.20</b></span>
+          <span>Höhe <b id="height-value">2.30</b></span>
+        </div>
+        <button id="reset-camera" class="quiet-button" type="button">Kamera zurücksetzen <span>↺</span></button>
+      </div>
+
+      <div class="control-card detail-card">
+        <p class="section-index">KUGELNETZ</p>
+        <h2>Unterteilung</h2>
+        <label class="range-label" for="depth">Rekursionstiefe <output id="depth-value" for="depth">3</output></label>
+        <input id="depth" type="range" min="0" max="5" step="1" value="3">
+        <div class="range-ends"><span>0 · Oktaeder</span><span>5 · fein</span></div>
+        <p class="triangle-count">Dreiecke: <strong id="triangle-count">512</strong></p>
+        <label class="check-row"><input id="wireframe" type="checkbox" checked><span class="checkmark" aria-hidden="true"></span> Gitternetz anzeigen</label>
+      </div>
+    </section>
+
+    <footer class="notes">
+      <div class="note-block sources">
+        <p class="section-index">Quellen:</p>
+        <p>http://blog.andreaskahler.com/2009/06/creating-icosphere-mesh-in-code.html</p>
+        <p>http://www.stephan-brumme.com/download/grafik/Computergrafik2.pdf</p>
+        <p>http://paulbourke.net/geometry/circlesphere/csource3.c</p>
+        <p>https://arxiv.org/ftp/cs/papers/0701/0701164.pdf</p>
+        <p></p>
+      </div>
+    </footer>
+  </main>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"8607d2a720d14b038279025b2b5a82e5","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
