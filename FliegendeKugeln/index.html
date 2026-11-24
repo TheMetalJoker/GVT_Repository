@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b20">
+  <title>Objekte bewegen — fliegende Kugeln</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <header class="masthead">
+      <div><p class="kicker"></p>
+        <h1><span>MeineFliegenden Kugeln EA6</span></h1></div>
+    </header>
+    <section class="stage" aria-label="Interaktive 3D-Szene">
+      <canvas id="scene" aria-label="Animierter Torus mit vier Kugeln, Kreisbahnen und Gitterboden">WebGL 2 wird für die 3D-Szene benötigt.</canvas>
+      <div class="stage-tag"><span class="live-dot"></span>ANIMATION <span id="motion-state">LÄUFT</span></div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </section>
+    <section class="workbench" aria-label="Animationssteuerung und Hinweise">
+      <div class="control-card">
+        <h2>Bewegung steuern</h2>
+        <button id="toggle-animation" class="quiet-button" type="button" aria-pressed="true">Animation pausieren <span>Ⅱ</span></button>
+      </div>
+    </section>
+    <footer class="notes">
+      <div class="note-block sources">
+        <p><strong>Quellen:</strong> https://webglfundamentals.org/webgl/lessons/webgl-2d-rotation.html</p>
+    </footer>
+  </main>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"8607d2a720d14b038279025b2b5a82e5","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
